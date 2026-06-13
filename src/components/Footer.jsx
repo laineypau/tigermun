@@ -22,9 +22,9 @@ export function Footer() {
           </div>
         </div>
         <div style={{ display: 'flex', gap: 64, flexWrap: 'wrap' }}>
-          <FootCol title="Explore" items={[['Home', '/'], ['Committees', '/committees'], ['Secretariat', '/secretariat'], ['Register', '/registration']]} />
-          <FootCol title="Committees" items={[['General Assembly'], ['Specialized'], ['Crisis']]} />
-          <FootCol title="Connect" items={[['Instagram'], ['Email Us'], ['SAS Dream Factory']]} />
+          <FootCol title="Explore" items={[['Home', '/'], ['Committees', '/committees'], ['About', '/about'], ['Secretariat', '/secretariat'], ['Register', '/registration']]} />
+          <FootCol title="Committees" items={[['General Assembly', '/committees'], ['Specialized', '/committees'], ['Crisis', '/committees']]} />
+          <FootCol title="Connect" items={[['Instagram', 'https://www.instagram.com/tigermun26/'], ['Email Us', 'mailto:alexav.pla@gmail.com'], ['SAS Dream Factory', 'https://sasdreamfactory.net/']]} />
         </div>
       </div>
       <div style={{
@@ -47,20 +47,20 @@ function FootCol({ title, items }) {
         textTransform: 'uppercase', color: 'var(--ink-300)', marginBottom: 14,
       }}>{title}</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-        {items.map(([label, to]) => (
-          to
-            ? (
-              <Link key={label} to={to} style={{
-                fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', color: 'var(--white)',
-                textDecoration: 'none',
-              }}>{label}</Link>
-            )
-            : (
-              <span key={label} style={{
-                fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', color: 'var(--white)',
-              }}>{label}</span>
-            )
-        ))}
+        {items.map(([label, to]) => {
+          const linkStyle = { fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', color: 'var(--white)', textDecoration: 'none' };
+          if (!to) return <span key={label} style={linkStyle}>{label}</span>;
+          if (to.startsWith('http') || to.startsWith('mailto:')) {
+            return (
+              <a key={label} href={to} style={linkStyle}
+                target={to.startsWith('http') ? '_blank' : undefined}
+                rel={to.startsWith('http') ? 'noreferrer' : undefined}>
+                {label}
+              </a>
+            );
+          }
+          return <Link key={label} to={to} style={linkStyle}>{label}</Link>;
+        })}
       </div>
     </div>
   );

@@ -1,17 +1,12 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button.jsx';
 import { Placard } from '../components/ui/Placard.jsx';
 import { SectionHeading } from '../components/ui/SectionHeading.jsx';
 import { Card } from '../components/ui/Card.jsx';
-import { CommitteeCard } from '../components/CommitteeCard.jsx';
 import { Logo } from '../components/Logo.jsx';
 import { Illustration } from '../components/Illustration.jsx';
-import { COMMITTEES } from '../data/committees.js';
 
 export default function Home() {
-  const navigate = useNavigate();
-  const committees = COMMITTEES.slice(0, 3);
-
   return (
     <div>
       {/* HERO */}
@@ -48,9 +43,9 @@ export default function Home() {
             </p>
             <div style={{ display: 'flex', gap: 14, marginTop: 34, flexWrap: 'wrap' }}>
               <Button as={Link} to="/registration" size="lg">Register Here</Button>
-              <Button as={Link} to="/committees" size="lg" variant="outline"
+              <Button as={Link} to="/about" size="lg" variant="outline"
                 style={{ color: 'var(--white)', borderColor: 'var(--ink-300)' }}>
-                View Committees
+                Learn More
               </Button>
             </div>
             <div style={{ display: 'flex', gap: 14, marginTop: 46, flexWrap: 'wrap' }}>
@@ -65,8 +60,8 @@ export default function Home() {
       {/* WHY JOIN */}
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '88px 32px' }}>
         <SectionHeading align="center" eyebrow="Why TigerMUN"
-          title="Made for students, by students"
-          intro="We take the experiences that shaped us in Model UN and pour them into a conference that is equal parts educational and fun." />
+          title="Why join TigerMUN?"
+          intro="TigerMUN serves as an excellent opportunity for high school students, whether seasoned or just beginning their journey, to experience Model United Nations. Made for students, by students, these two days of committee will be both educational and fun." />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 22, marginTop: 52 }}>
           <Feature illus="open-hand" title="Beginner friendly" body="New delegates are more than welcome. We teach the ins and outs of MUN so it never feels too big or scary." />
           <Feature illus="speech" title="Think outside the box" body="From versatile General Assemblies to fast-moving crisis rooms, we invite delegates to let their creative juices flow." />
@@ -79,21 +74,23 @@ export default function Home() {
         <div style={{ maxWidth: 1080, margin: '0 auto', padding: '80px 32px' }}>
           <SectionHeading eyebrow="The Weekend" title="Two days of committee" />
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 22, marginTop: 40 }}>
-            <DayCard n="1" day="Day One" date="Fri · Oct 16" body="Delegates attend opening ceremonies and dive into their introductory committee session." />
-            <DayCard n="2" day="Day Two" date="Sat · Oct 17" body="A full day of debate with a lunch break in between, finishing with awards and closing ceremonies." />
+            <DayCard n="1" day="Day One" date="Fri · Oct 16" body="Delegates will attend opening ceremonies and participate in their introductory committee session." />
+            <DayCard n="2" day="Day Two" date="Sat · Oct 17" body="Delegates will get involved in a full day of debate with a lunch break in between, finishing with awards and closing ceremonies." />
           </div>
         </div>
       </section>
 
       {/* COMMITTEES PREVIEW */}
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '88px 32px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 16 }}>
-          <SectionHeading eyebrow="Committees" title="Find your seat at the table"
-            intro="Three tracks, every experience level. From your first placard to your hardest crisis." />
-          <Button as={Link} to="/committees" variant="ghost">All committees →</Button>
+        <SectionHeading align="center" eyebrow="Committees" title="Three tracks, every level"
+          intro="General Assembly, Specialized, and Crisis committees — full details are coming late June to early July." />
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap', marginTop: 28 }}>
+          <Placard tone="blue" size="sm">General Assembly</Placard>
+          <Placard tone="paper" size="sm">Specialized</Placard>
+          <Placard tone="ink" size="sm">Crisis</Placard>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 22, marginTop: 40 }}>
-          {committees.map((c) => <CommitteeCard key={c.code} {...c} onClick={() => navigate('/committees')} />)}
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 32 }}>
+          <Button as={Link} to="/committees" variant="outline">View committees</Button>
         </div>
       </section>
 

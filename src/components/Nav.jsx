@@ -6,6 +6,7 @@ import { Logo } from './Logo.jsx';
 const links = [
   ['/', 'Home'],
   ['/committees', 'Committees'],
+  ['/about', 'About'],
   ['/secretariat', 'Secretariat'],
 ];
 
