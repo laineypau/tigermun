@@ -7,8 +7,7 @@ export default function Secretariat() {
 
   return (
     <div>
-      <PageHeader eyebrow="The Secretariat" title="Meet the team behind the gavel"
-        intro="A student-led secretariat from the School for Advanced Studies, building TigerMUN's very first iteration." />
+      <PageHeader eyebrow="About" title="The Secretariat" />
       <section style={{ maxWidth: 1100, margin: '0 auto', padding: '56px 32px 32px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
           {lead.map((p) => <LeadCard key={p.name} p={p} />)}
@@ -38,7 +37,7 @@ function LeadCard({ p }) {
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand)' }}>{p.role}</span>
         <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--text-xl)', color: 'var(--ink-800)', margin: '6px 0 10px' }}>{p.name}</h3>
-        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{p.bio}</p>
+        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-body)', margin: 0, whiteSpace: 'pre-line' }}>{p.bio}</p>
       </div>
     </div>
   );
@@ -58,7 +57,7 @@ function BioCard({ p }) {
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sky-600)' }}>{p.role}</span>
         </div>
       </div>
-      <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-body)', margin: 0, padding: '18px 20px 22px' }}>{p.bio}</p>
+      <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-body)', margin: 0, padding: '18px 20px 22px', whiteSpace: 'pre-line' }}>{p.bio}</p>
     </div>
   );
 }

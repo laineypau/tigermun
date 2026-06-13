@@ -20,9 +20,8 @@ export default function Home() {
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, var(--ink-900) 42%, rgba(6,14,26,0.55) 70%, rgba(6,14,26,0.15) 100%)' }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '92px 32px 100px', position: 'relative' }}>
           <div style={{ maxWidth: 680 }}>
-            <BannerOverline>SAS Model UN Conference</BannerOverline>
             <div style={{
-              marginTop: 18, fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 700, letterSpacing: '0.2em',
+              fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 700, letterSpacing: '0.2em',
               textTransform: 'uppercase', color: 'var(--sky-300)', display: 'inline-flex', alignItems: 'center', gap: 12,
             }}>
               <span style={{ width: 28, height: 2, background: 'var(--sky-400)' }} />
@@ -38,8 +37,7 @@ export default function Home() {
               fontFamily: 'var(--font-sans)', fontSize: 'var(--text-md)', lineHeight: 1.65,
               color: 'var(--ink-200)', margin: '24px 0 0', maxWidth: 540,
             }}>
-              Two days of debate, diplomacy, and crisis at the School for Advanced Studies —
-              beginner-friendly and built to mark your future.
+              School for Advanced Studies Model United Nations Conference.
             </p>
             <div style={{ display: 'flex', gap: 14, marginTop: 34, flexWrap: 'wrap' }}>
               <Button as={Link} to="/registration" size="lg">Register Here</Button>
@@ -62,10 +60,9 @@ export default function Home() {
         <SectionHeading align="center" eyebrow="Why TigerMUN"
           title="Why join TigerMUN?"
           intro="TigerMUN serves as an excellent opportunity for high school students, whether seasoned or just beginning their journey, to experience Model United Nations. Made for students, by students, these two days of committee will be both educational and fun." />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 22, marginTop: 52 }}>
-          <Feature illus="open-hand" title="Beginner friendly" body="New delegates are more than welcome. We teach the ins and outs of MUN so it never feels too big or scary." />
-          <Feature illus="speech" title="Think outside the box" body="From versatile General Assemblies to fast-moving crisis rooms, we invite delegates to let their creative juices flow." />
-          <Feature illus="reporters" title="A real community" body="The best part of MUN is the people. Two days of committee, awards, and friendships that outlast the gavel." />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 22, marginTop: 52 }}>
+          <Feature illus="open-hand" title="Beginner friendly" body="We are beginner friendly, so new delegates are more than welcome! In these three days of committee, delegates will learn all the ins and outs of MUN so it does not feel so big and scary." />
+          <Feature illus="speech" title="Think outside the box" body="Through our unique crisis committees for more experienced delegates and versatile General Assembly Committees, we invite delegates to think outside the box and let their creative juices flow!" />
         </div>
       </section>
 
@@ -82,15 +79,15 @@ export default function Home() {
 
       {/* COMMITTEES PREVIEW */}
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '88px 32px' }}>
-        <SectionHeading align="center" eyebrow="Committees" title="Three tracks, every level"
-          intro="General Assembly, Specialized, and Crisis committees — full details are coming late June to early July." />
+        <SectionHeading align="center" eyebrow="Committees" title="Coming Soon"
+          intro="More committee information will be released late June to early July. Please check back then, or kindly contact Under Secretary General of Delegate Affairs, Alexa Pla, at alexav.pla@gmail.com for further inquiries." />
         <div style={{ display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap', marginTop: 28 }}>
           <Placard tone="blue" size="sm">General Assembly</Placard>
           <Placard tone="paper" size="sm">Specialized</Placard>
           <Placard tone="ink" size="sm">Crisis</Placard>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 32 }}>
-          <Button as={Link} to="/committees" variant="outline">View committees</Button>
+          <Button as={Link} to="/committees" variant="outline">Committees</Button>
         </div>
       </section>
 
@@ -104,27 +101,15 @@ export default function Home() {
             This impact starts now.
           </h2>
           <p style={{ fontSize: 'var(--text-md)', color: 'rgba(255,255,255,0.92)', margin: '16px auto 30px', maxWidth: 520, lineHeight: 1.6 }}>
-            Just by choosing TigerMUN, you are marking your future. We can't wait to see you in committee.
+            Just by choosing Tiger MUN you are marking your future.
           </p>
           <Button as={Link} to="/registration" size="lg" variant="secondary"
             style={{ background: 'var(--ink-900)', borderColor: 'var(--ink-900)' }}>
-            Register for TigerMUN
+            Register Here
           </Button>
         </div>
       </section>
     </div>
-  );
-}
-
-function BannerOverline({ children }) {
-  return (
-    <span style={{
-      fontFamily: 'var(--font-banner)', textTransform: 'uppercase', fontSize: 'clamp(26px, 3vw, 40px)',
-      letterSpacing: '0.01em', lineHeight: 0.92, color: 'transparent',
-      WebkitTextStroke: '1.5px var(--sky-300)', display: 'inline-block',
-    }}>
-      {children}
-    </span>
   );
 }
 

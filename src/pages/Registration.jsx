@@ -6,22 +6,17 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdkWH3_hMniLrJ71IzOGd
 export default function Registration() {
   return (
     <div>
-      <PageHeader eyebrow="Registration" title="Claim your placard"
-        intro="Registration takes just a couple of minutes through our interest form. New delegates are more than welcome — we'll handle the rest." />
+      <PageHeader title="Registration" />
       <section style={{ maxWidth: 1040, margin: '0 auto', padding: '56px 32px 96px', display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 48, alignItems: 'start' }}>
         <div style={{
           background: 'var(--white)', border: '1px solid var(--border-hair)',
           borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', padding: 32, textAlign: 'center',
         }}>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--text-xl)', color: 'var(--ink-900)', margin: '0 0 12px' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--text-xl)', color: 'var(--ink-900)', margin: '0 0 24px' }}>
             TigerMUN I Interest Form
           </h2>
-          <p style={{ fontSize: 'var(--text-md)', color: 'var(--text-body)', lineHeight: 1.6, margin: '0 0 24px' }}>
-            Fill out the official interest form to register for TigerMUN — it's the first step to claiming
-            your seat at the table.
-          </p>
           <Button as="a" href={FORM_URL} target="_blank" rel="noreferrer" size="lg" full>
-            Open the Interest Form
+            TigerMUN I Interest Form
           </Button>
         </div>
         {/* aside */}
@@ -31,11 +26,10 @@ export default function Registration() {
             <Detail k="Dates" v="Oct 16–17, 2026" />
             <Detail k="Where" v="SAS · Miami, FL" />
             <Detail k="Tracks" v="GA · Specialized · Crisis" />
-            <Detail k="Level" v="Beginner → Advanced" />
           </div>
           <div style={{ background: 'var(--bg-page-alt)', border: '1px solid var(--border-hair)', borderRadius: 'var(--radius-lg)', padding: 24 }}>
             <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'var(--text-md)', color: 'var(--ink-800)', lineHeight: 1.5, margin: 0 }}>
-              "Just by choosing TigerMUN, you are marking your future."
+              "This impact starts now; just by choosing Tiger MUN you are marking your future."
             </p>
           </div>
         </aside>

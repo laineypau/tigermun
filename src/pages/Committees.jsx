@@ -12,8 +12,7 @@ const TRACKS = [
 export default function Committees() {
   return (
     <div>
-      <PageHeader eyebrow="Committees" title="Coming soon"
-        intro="Three tracks, every level — General Assembly, Specialized, and Crisis." />
+      <PageHeader eyebrow="Committees" title="Coming Soon" />
       <section style={{ maxWidth: 760, margin: '0 auto', padding: '88px 32px 110px' }}>
         <Card style={{ padding: 'var(--space-7)', textAlign: 'center' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>

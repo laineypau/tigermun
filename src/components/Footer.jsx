@@ -12,7 +12,7 @@ export function Footer() {
         <div style={{ maxWidth: 330 }}>
           <Logo variant="lockup" tone="light" size={48} />
           <p style={{ fontSize: 'var(--text-sm)', lineHeight: 1.65, color: 'var(--ink-200)', margin: '18px 0 0' }}>
-            The School for Advanced Studies Model United Nations Conference. Made for students, by students.
+            School for Advanced Studies Model United Nations Conference
           </p>
           <div style={{
             marginTop: 18, fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700,
