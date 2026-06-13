@@ -8,9 +8,9 @@
       // https://github.com/rafgraph/spa-github-pages
       // Encodes the requested path into a query string and redirects to the
       // app's index.html, which decodes it back (see the snippet in index.html).
-      // pathSegmentsToKeep = 0 because the site is served from the domain root
-      // (tigermun.com via CNAME), not a /<repo>/ subpath.
-      var pathSegmentsToKeep = 0;
+      // pathSegmentsToKeep = 1 because the site is served from the
+      // laineypau.github.io/tigermun/ project-pages subpath.
+      var pathSegmentsToKeep = 1;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
