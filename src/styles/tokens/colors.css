@@ -1,0 +1,110 @@
+/* ============================================================
+   TigerMUN — COLOR TOKENS
+   Brand board palette (exact): Black #000 · Royal Blue #0052A3 ·
+   Sky Blue #5F97DD · White #FFF. Clean, cool, high-contrast —
+   black ink line-art on white, royal blue as the primary brand.
+   Ink-navy supports as a deep diplomatic dark; cool neutrals for chrome.
+   ============================================================ */
+
+:root {
+  /* ---- Royal Blue — PRIMARY BRAND (#0052A3) ---- */
+  --blue-50:  #E9F1FB;
+  --blue-100: #C9DEF4;
+  --blue-200: #94BDE8;
+  --blue-300: #4E8AD2;
+  --blue-400: #1E69BC;
+  --blue-500: #0052A3;   /* core brand — from board */
+  --blue-600: #004488;
+  --blue-700: #00366C;
+  --blue-800: #042A53;
+  --blue-900: #0A1E3A;
+
+  /* ---- Sky Blue — secondary accent (#5F97DD) ---- */
+  --sky-50:  #EEF4FC;
+  --sky-100: #DBE8F9;
+  --sky-200: #BAD3F1;
+  --sky-300: #8DB5E8;
+  --sky-400: #5F97DD;   /* core sky — from board */
+  --sky-500: #4480CB;
+  --sky-600: #3568AC;
+  --sky-700: #294F82;
+
+  /* ---- Ink Navy — diplomatic dark / authority surfaces ---- */
+  --ink-50:  #EDF1F7;
+  --ink-100: #D5DEEC;
+  --ink-200: #A6B7D0;
+  --ink-300: #6F87AC;
+  --ink-400: #415E89;
+  --ink-500: #243E63;
+  --ink-600: #182C49;
+  --ink-700: #112138;   /* core ink */
+  --ink-800: #0B1728;
+  --ink-900: #060E1A;   /* deepest navy section */
+
+  /* ---- Black — true brand ink (line-art, stripes, deepest text) ---- */
+  --black:   #0A0A0A;
+  --black-pure: #000000;
+
+  /* ---- Cool neutrals (clean grays, not warm) ---- */
+  --neutral-50:  #F6F8FB;
+  --neutral-100: #EDF1F6;
+  --neutral-200: #DFE5ED;   /* hairline border */
+  --neutral-300: #C5CEDA;
+  --neutral-400: #98A4B4;
+  --neutral-500: #6A7686;
+  --neutral-600: #4A5562;
+  --neutral-700: #333B45;
+  --neutral-800: #20262E;
+  --neutral-900: #11151B;
+  --white: #FFFFFF;
+
+  /* Legacy aliases (kept on-brand so older refs stay clean) */
+  --cream:     #FFFFFF;
+  --parchment: #F6F8FB;
+
+  /* ---- Semantic status ---- */
+  --success-500: #1F8A52;
+  --success-50:  #E5F3EC;
+  --warn-500:    #B8791A;
+  --warn-50:     #F8EFDC;
+  --danger-500:  #C23A2B;
+  --danger-50:   #FBEAE7;
+  --info-500:    var(--blue-500);
+  --info-50:     var(--blue-50);
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in product code
+     ============================================================ */
+  --brand:           var(--blue-500);
+  --brand-hover:     var(--blue-600);
+  --brand-active:    var(--blue-700);
+  --brand-subtle:    var(--blue-50);
+
+  --accent:          var(--sky-400);
+  --accent-hover:    var(--sky-500);
+  --accent-subtle:   var(--sky-50);
+
+  --bg-page:         var(--white);
+  --bg-page-alt:     var(--neutral-50);
+  --surface-card:    var(--white);
+  --surface-sunken:  var(--neutral-100);
+  --surface-ink:     var(--ink-800);    /* dark sections */
+  --surface-ink-alt: var(--ink-900);
+  --surface-brand:   var(--blue-500);
+
+  --text-strong:     var(--ink-900);    /* headlines on light */
+  --text-body:       var(--neutral-700);
+  --text-muted:      var(--neutral-500);
+  --text-faint:      var(--neutral-400);
+  --text-on-ink:     var(--white);      /* on dark navy/black */
+  --text-on-ink-mut: var(--ink-200);
+  --text-on-brand:   var(--white);
+  --text-link:       var(--blue-600);
+
+  --border-hair:     var(--neutral-200);
+  --border-soft:     var(--neutral-300);
+  --border-strong:   var(--ink-700);
+  --border-ink:      var(--black);
+
+  --focus-ring:      var(--sky-400);
+}

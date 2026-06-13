@@ -1,0 +1,23 @@
+/* ============================================================
+   TigerMUN — WEBFONTS
+   Brand board specifies two display faces:
+     • Roca One Bold        → rounded slab-serif display / headlines
+     • Typecraft New Amsterdam → outlined collegiate condensed caps (banners)
+   Both are commercial foundry fonts and are NOT on Google Fonts, so the system
+   ships the closest free substitutes and flags them:
+     • Roca One Bold        → "Aleo"  (rounded humanist slab)            [SUBSTITUTE]
+     • Typecraft New Amsterdam → "Anton" rendered outlined via text-stroke [SUBSTITUTE]
+   Supporting faces (not on the board, chosen to pair cleanly):
+     • Archivo    → grotesque sans for UI + body
+     • Space Mono → committee codes, dates, technical micro-labels
+   ⚠️ Supply the real Roca One Bold + Typecraft New Amsterdam files to swap in.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,500;0,700;0,800;1,400;1,700&family=Anton&family=Archivo:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --font-display: 'Aleo', 'Roca One', Georgia, 'Times New Roman', serif;          /* Roca One Bold substitute */
+  --font-banner:  'Anton', 'Typecraft New Amsterdam', 'Archivo', sans-serif;       /* Typecraft substitute — use uppercase */
+  --font-sans:    'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'Space Mono', 'SFMono-Regular', ui-monospace, monospace;
+}
